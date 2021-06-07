@@ -1,5 +1,24 @@
 require 'sinatra'
+require "sinatra/reloader" if development?
 
 get '/' do
-  "Hello World"
+  "Hello!"
 end
+
+get '/secret' do
+  "This one time at band camp..."
+end
+
+get '/about' do
+  "I'm learning to code"
+end
+
+get '/contact' do
+  "Don't contact me"
+end
+
+get '/cat' do
+    "<div style='border: 3px dashed red'>
+      <img src='https://i.imgur.com/jFaSxym.png'>
+     </div>"
+  end
